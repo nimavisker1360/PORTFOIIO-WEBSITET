@@ -1,36 +1,46 @@
 // links
-import Link from 'next/link';
+import Link from "next/link";
 
 // icons
 import {
   RiYoutubeLine,
-  RiInstagramLine,
-  RiFacebookLine,
+  RiTelegramFill,
+  RiLinkedinBoxFill,
   RiDribbbleLine,
-  RiBehanceLine,
-  RiPinterestLine,
-} from 'react-icons/ri';
+
+  RiGithubFill,
+} from "react-icons/ri";
 
 const Socials = () => {
   return (
-    <div className='flex items-center gap-x-5 text-lg'>
-      <Link href={''} className='hover:text-accent transition-all duration-300'>
+    <div className="relative flex flex-row xl:max-w-md xl:right-[8%]  bottom-0 mt-auto   items-center justify-center  gap-x-5 text-[1.2rem] w-full">
+      <Link href={""} className="hover:text-accent transition-all duration-300">
         <RiYoutubeLine />
       </Link>
-      <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiFacebookLine />
+      <Link
+        href={"https://www.linkedin.com/in/nima-bagheri-0805541a8/"}
+        className="hover:text-accent transition-all duration-300"
+      >
+        <RiLinkedinBoxFill />
       </Link>
-      <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiInstagramLine />
+      <Link
+        href={"https://t.me/suportVpnCentral"}
+        className="hover:text-accent transition-all duration-300"
+      >
+        <RiTelegramFill />
       </Link>
-      <Link href={''} className='hover:text-accent transition-all duration-300'>
+      <Link
+        href={"https://dribbble.com/nimabt/shots"}
+        className="hover:text-accent transition-all duration-300"
+      >
         <RiDribbbleLine />
       </Link>
-      <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiBehanceLine />
-      </Link>
-      <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiPinterestLine />
+   
+      <Link
+        href={"https://github.com/nimavisker1360"}
+        className="hover:text-accent transition-all duration-300"
+      >
+        <RiGithubFill />
       </Link>
     </div>
   );

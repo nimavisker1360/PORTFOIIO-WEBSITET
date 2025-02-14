@@ -1,26 +1,25 @@
-import { Particles } from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
-import React, { useCallback } from 'react';
+import { Particles } from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import React, { useCallback } from "react";
 
 const ParticlesContainer = () => {
-  //  init
-  const particlesInit = useCallback(async (engine) => {
+  const particleInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async () => {}, []);
+  const particleLoaded = useCallback(async () => {}, []);
 
   return (
     <Particles
-      className='w-full h-full absolute translate-z-0'
-      id='tsparticles'
-      init={particlesInit}
-      loaded={particlesLoaded}
+      className="w-full h-full absolute translate-z-0"
+      id="tsparticles"
+      init={particleInit}
+      loaded={particleLoaded}
       options={{
         fullScreen: { enable: false },
         background: {
           color: {
-            value: '',
+            value: "",
           },
         },
         fpsLimit: 120,
@@ -28,30 +27,31 @@ const ParticlesContainer = () => {
           events: {
             onClick: {
               enable: false,
-              mode: 'push',
+              mode: "push",
             },
             onHover: {
               enable: true,
-              mode: 'repulse',
+              mode: "repulse",
             },
-            resize: true,
+            resize:true,
+
           },
-          modes: {
-            push: {
-              quantity: 90,
+          modes:{
+            push:{
+              quantity: 90
             },
-            repulse: {
+            repulse:{
               distance: 200,
-              duration: 0.4,
-            },
-          },
+              duration: 0.4
+            }
+          }
         },
         particles: {
           color: {
-            value: '#e68e2e',
+            value: "#e68e2e",
           },
           links: {
-            color: '#f5d393',
+            color: "#f5d393",
             distance: 150,
             enable: true,
             opacity: 0.5,
@@ -61,10 +61,10 @@ const ParticlesContainer = () => {
             enable: true,
           },
           move: {
-            directions: 'none',
+            direction: "none",
             enable: true,
             outModes: {
-              default: 'bounce',
+              default: "bounce",
             },
             random: false,
             speed: 1,
@@ -81,7 +81,7 @@ const ParticlesContainer = () => {
             value: 0.5,
           },
           shape: {
-            type: 'circle',
+            type: "circle",
           },
           size: {
             value: { min: 1, max: 5 },
